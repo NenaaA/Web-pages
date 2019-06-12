@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Tab Component</title>
+    <style>
+        #tab-component {
+            width: 100%;
+            font-family: Verdana;
+        }
+ 
+        #nav {
+            position: relative;
+            background-image: linear-gradient(to right, #11d9fc, #bcffea, #11d9fc);
+            border: 1px solid lightgray;
+            width: 100%;
+            height: 200px;
+        }
+ 
+        #nav p {
+            padding-left: 30px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-size: 30px;
+            width: 50%;
+            background-image: linear-gradient(to right, #02c1e8, #bcffea);
+        }
+ 
+        button {
+            border: 1px solid black;
+            font-size: 17px;
+            width: 30%;
+            margin-left: 2%;
+            padding: 6px;
+            background-color: #e5ffe5;
+        }
+        button:hover {
+            border: 4px solid #01e833;
+            padding: 3px;
+        }
+        #text {
+            background-image: linear-gradient(to right, #fffcaa, white, #fffcaa);
+            border: 1px solid black;
+            border-top: none;
+            height: 100%;
+            margin-top: -2px;
+        }
+        #text div {
+            padding: 2%;
+            margin: 0;
+            display: none;
+        }
+        #text p {
+            width: 80%;
+            float:right;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <div id="tab-component">
+        <div id="nav">
+            <p>Top Rated Movies of All Time</p>
+            <button onclick="show1()">The Shawshank Redemption</button>
+            <button onclick="show2()">The Godfather</button>
+            <button onclick="show3()">The Dark Knight</button>
+        </div>
+        <div id="text">
+            <div id="show1">
+                <img src="images/TSR.jpg">
+                <p>Rating: 9.2<br><br>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. <br><br>
+                Director: Frank Darabont <br>
+                    Writers: Stephen King, Frank Darabont <br>
+                    Stars: Tim Robbins, Morgan Freeman, Bob Gunton
+                </p>
+            </div>
+            <div id="show2">
+                <img src="images/TGF.jpg">
+                <p>Rating: 9.2<br><br>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.<br><br>
+                    Director: Francis Ford Coppola<br>
+                    Writers: Mario Puzo, Francis Ford Coppola<br>
+                    Stars: Marlon Brando, Al Pacino, James Caan</p>
+            </div>
+            <div id="show3">
+                <img src="images/TDN.jpg">
+                <p>Rating: 9.0<br><br>When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.<br>
+                    Director: Christopher Nolan<br><br>
+                    Writers: Jonathan Nolan, Christopher Nolan<br>
+                    Stars: Christian Bale, Heath Ledger, Aaron Eckhart</p>
+            </div>
+        </div>
+    </div>
+ 
+    <script type="text/javascript" src="jquery-2.1.0.min.js">
+	</script>
+ 
+ 
+    <script>
+		const show1 = () => {
+			if ($('#show1').is(":visible")) {
+			}
+			else {
+				hideAll()
+				$('#show1').show();
+			}
+	 
+		}
+	 
+		const show2 = () => {
+			if ($('#show2').is(":visible")) {
+		 
+			}
+			else {
+				hideAll();
+				$('#show2').show();
+			}
+		}
+	 
+		const show3 = () => {
+			if ($('#show3').is(":visible")) {
+			}
+			else {
+				hideAll()
+				$('#show3').show();
+			}
+		}
+	 
+		const hideAll = () => {
+			$('#show1').hide();
+			$('#show2').hide();
+			$('#show3').hide();
+		}
+	</script>
+</body>
+ 
+</html>
